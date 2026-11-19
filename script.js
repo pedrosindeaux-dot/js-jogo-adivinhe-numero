@@ -1,26 +1,46 @@
-alert("BOAS VINDAS");
+alert("Boas vindas");
 
 let nomeJogador = prompt("Digite seu nome");
 
-let querJogar = confirm("Deseja jogar?")
+let querJogar = confirm("Deseja jogar?");
 
-if (querJogar) {
-    alert("Boa sorte, " + nomeJogador);
+if(querJogar) {
+
+    alert("Boa Sorte, " + nomeJogador);
+
     const numeroSecreto = 7;
-    let numeroDigitado = prompt("Chute um numero");
+    let acertou=false;
 
+    while(acertou === false) {
+        let numeroDigitado = prompt("Digite um numero");
+    numeroDigitado = Number(numeroDigitado);
 
-    if (numeroDigitado == numeroSecreto) {
-        alert("Parabens, você acertou!");
-    }
-    if (numeroDigitado > numeroSecreto) {
-        alert("É menos!");
-    }
-    if (numeroDigitado < numeroSecreto) {
+    if(numeroDigitado < 1 || numeroDigitado > 10 || isNaN(numeroDigitado)) {
+
+        alert("Número inválido! Digite de 1 a 10.");
+
+    } else if(numeroSecreto == numeroDigitado) {
+
+        alert("Parabéns, você acertou");
+        acertou = true
+
+    } else if(numeroSecreto < numeroDigitado) {
+
+        alert("É menor!");
+
+    } else if(numeroSecreto > numeroDigitado) {
+
         alert("É maior!");
-    }
-}
 
-else {
-    alert("Que pena, até a próxima!");
+    }
+    }
+
+} else {
+
+    alert("Que pena! Até a próxima");
+    
 }
+    
+
+
+    
