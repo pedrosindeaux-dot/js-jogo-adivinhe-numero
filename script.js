@@ -6,7 +6,7 @@ let querJogar = confirm("Deseja jogar?");
 
 if (querJogar) {
 
-    alert("Boa Sorte, " + nomeJogador);
+    boasorte(nomeJogador)
 
     const numeroSecreto = 7;
     let acertou = false;

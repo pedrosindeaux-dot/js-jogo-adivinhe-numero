@@ -43,3 +43,7 @@ function checarNumero(numeroDigitado, numeroSecreto) {
     }
 
 }
+
+function boasorte(nomeJogador){
+alert("Boa Sorte, " + nomeJogador);
+}
